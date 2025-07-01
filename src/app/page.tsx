@@ -1,5 +1,4 @@
 'use client';
-import Image from "next/image";
 import { useState, useEffect } from "react";
 import Confetti from "react-confetti";
 import { Dialog, DialogContent, DialogTitle  } from "@/components/ui/dialog";
@@ -28,7 +27,7 @@ export default function Home() {
     ];
 
     function checkWinner(newBoard: string[]) {
-      for (let line of lines) {
+      for (const line of lines) {
         const [a, b, c] = line;
         if (
           newBoard[a] &&
